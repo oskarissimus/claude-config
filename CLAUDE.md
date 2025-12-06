@@ -25,3 +25,12 @@ EOF
 Run `./setup-macos.sh` to configure:
 - Touch ID for sudo (survives macOS updates)
 - Karabiner Elements with F5 shortcut for voice mode
+
+## MCP Servers
+
+Add voice mode MCP server to Claude Code:
+```bash
+claude mcp add voicemode --scope user -- uvx --refresh voice-mode
+```
+
+This adds the voicemode server to `~/.claude.json` which enables the `/voicemode:converse` command for voice conversations.
